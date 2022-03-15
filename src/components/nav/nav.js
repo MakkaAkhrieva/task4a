@@ -14,7 +14,6 @@ const Nav = ({ data }) => {
       <div className="container">
         <div className="navbar__wrap">
           <img src="./image/spring-logo.svg" alt="logo" className="logo" />
-
           <div className="hamb">
             <div className="hamb__field" id="hamb">
               <span className="bar"></span>

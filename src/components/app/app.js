@@ -29,7 +29,6 @@ function App() {
     setTerm(term);
   };
 
-
   useEffect(()=>{
     let timeoutId=0;
     timeoutId = setTimeout(()=>{
@@ -38,7 +37,6 @@ function App() {
     clearTimeout(timeoutId);
   });
  
-
   const visibleData= useMemo(()=>{
     return cardSeach(data, term);
 
