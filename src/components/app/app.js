@@ -16,7 +16,7 @@ function App() {
   const [data, setData] = useState(db);
   const [term, setTerm] = useState("");
 
-  let cardSeach = (items, term) => {
+  const cardSeach = (items, term) => {
     if (term.length === 0) {
       return items;
     }
