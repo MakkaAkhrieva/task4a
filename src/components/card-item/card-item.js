@@ -1,12 +1,11 @@
 import "./card-item.css";
 
-const CardItem = (props) => {
-  const { src, alt, name, text } = props;
+const CardItem = ({ img, alt, name, text }) => {
   return (
     <div className="box">
       <div className="box-wrapper">
         <div className="img-cont">
-          <img src={src} alt={alt} />
+          <img src={img} alt={alt} />
         </div>
         <div className="flex-text">
           <h2 className="name">{name}</h2>

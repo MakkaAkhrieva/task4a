@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect,useMemo } from "react";
 
 import Nav from "../nav/nav";
 import AppInfo from "../app-info/app-info";
@@ -25,11 +25,24 @@ function App() {
     });
   };
 
-  let onUpdateSearch = (term) => {
+  const onUpdateSearch = (term) => {
     setTerm(term);
   };
 
-  const visibleData = cardSeach(data, term);
+
+  useEffect(()=>{
+    let timeoutId=0;
+    timeoutId = setTimeout(()=>{
+      onUpdateSearch(term);
+    }, 300);
+    clearTimeout(timeoutId);
+  });
+ 
+
+  const visibleData= useMemo(()=>{
+    return cardSeach(data, term);
+
+  },[data,term])
 
   return (
     <div>

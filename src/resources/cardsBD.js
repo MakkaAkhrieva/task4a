@@ -1,14 +1,14 @@
 const cardsBD = [
   {
     id: "1",
-    img: "../../public/image/spring-boot.svg",
+    img: "./image/spring-boot.svg",
     alt: "spring-boot",
     name: "Spring Boot",
     text: "Takes an opinionated view of building Spring applications and gets you up and running as quickly as possible",
   },
   {
     id: "2",
-    img: "../../public/image/spring-framework.svg",
+    img: "./image/spring-framework.svg",
     alt: "Spring Framework",
     name: "Spring Framework",
     text: "Provides core support for dependency injection, transaction management, web apps, data access, messaging, and more.",
