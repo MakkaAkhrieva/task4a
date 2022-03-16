@@ -6,7 +6,7 @@ const errorText='There is no such result';
 const VisibleData=({text,elements})=>{
   return (
     <div className="main-flex-wrapper">
-      <div className="Error">{text}</div>
+      { text ? <div className="error">{text}</div> : null }
       <div className="flex-wrap">{elements}</div>
     </div>
   );

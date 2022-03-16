@@ -55,7 +55,7 @@
     width: 30px;
     height: 3px;
     margin: 6px auto;
-    background-color: black;
+    background-color: rgb(86, 79, 79);
     transition: 0.2s;
   }
   .popup {
@@ -68,7 +68,7 @@
     z-index: 100;
     display: flex;
     transition: 0.3s;
-    padding: 40px 60px 60px 40px;
+    padding: 70px 60px 60px 40px;
   }
   .popup.open {
     top: 0px;
@@ -113,6 +113,10 @@
     display: block;
     margin: 10px 0px;
     border-bottom: 1px solid #666;
+  }
+
+  .menu-wrap{
+    width: 100%;
   }
 
   .hamb__field.active .bar:nth-child(2) {
