@@ -1,13 +1,20 @@
 
+import { useCallback } from "react";
 import "./seach-panel.css";
 
 const SeachPanel = (props) => {
 
-  const onUpdateSearch = (e) => {
+  const Update = (e) => {
     const term = e.target.value;
-    props.onUpdateSearch(term);
+    UpdateSearch(term); 
   };
-  
+
+  const UpdateSearch=useCallback((term)=>{
+    const timeoutId=setTimeout(()=>{
+      props.onUpdateSearch(term);
+    }, 300);
+    if(!timeoutId)clearTimeout(timeoutId);
+  },[props.onUpdateSearch]);
 
   return (
     <div className="add-wrapper">
@@ -15,7 +22,7 @@ const SeachPanel = (props) => {
         className="input"
         type="text"
         placeholder="Search"
-        onChange={onUpdateSearch}
+        onChange={Update}
       />
     </div>
   );
