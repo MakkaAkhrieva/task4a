@@ -5,18 +5,14 @@ import "./mobile-menu.css";
 
 
 const MenuMobile =({data,active,setActive})=>{
-  /*    const menuElements = data.map((item) => {
-        const { id, ...itemProps } = item;
-        return <MenuListItem key={id} {...itemProps} active={active} />;
-      });   */
 
       const menuElements=useMemo(()=>{
-        data.map((item) => {
-          const { id, ...itemProps } = item;
-          return <MenuListItem key={id} {...itemProps} active={active} />;
-        });
+        return(
+          data.map(({ id, ...itemProps }) => {
+            return <MenuListItem key={id} {...itemProps} active={active} />;
+          })
+        )
       },[data])
-
 
 return(
 <div className={active ? 'navbar active' : 'navbar'}>

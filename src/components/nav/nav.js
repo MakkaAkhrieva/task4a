@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState,useMemo} from "react";
 
 import MenuListItem from "./menu-list-item";
 import MenuMobile from "../mobile-menu/mobile-menu";
@@ -8,9 +8,13 @@ import "./nav.css";
 import "../mobile-menu/mobile-menu.css";
 
 const Nav = () => {
-  const menuElements = menuDB.map(({ id, ...itemProps }) => {
-    return <MenuListItem key={id} {...itemProps} />;
-  });
+  const menuElements=useMemo(()=>{
+    return(
+      menuDB.map(({ id, ...itemProps }) => {
+        return <MenuListItem key={id} {...itemProps} />;
+      })
+    )
+  },[menuDB])
 
   const [menuActive,setMenuActive]=useState(false);
 
