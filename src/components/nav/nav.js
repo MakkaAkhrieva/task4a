@@ -7,8 +7,8 @@ import menuDB from "../../resources/menuDB";
 import "./nav.css";
 import "../mobile-menu/mobile-menu.css";
 
-const Nav = ({ data }) => {
-  const menuElements = data.map(({ id, ...itemProps }) => {
+const Nav = () => {
+  const menuElements = menuDB.map(({ id, ...itemProps }) => {
     return <MenuListItem key={id} {...itemProps} />;
   });
 
