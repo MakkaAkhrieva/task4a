@@ -6,6 +6,7 @@ import SeachPanel from "../search-panel/search-panel";
 import Cards from "../cards/cards";
 import cardsBD from "../../resources/cardsBD";
 import menuDB from "../../resources/menuDB";
+import MenuMobile from "../mobile-menu/mobile-menu";
 
 import "./app.css";
 import "../mobile-menu/mobile-menu.css";

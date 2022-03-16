@@ -6,6 +6,9 @@
 .logo {
   height: 30px;
 }
+li{
+  list-style-type: none;
+}
 .link {
   height: 10px;
   padding-left: 3px;

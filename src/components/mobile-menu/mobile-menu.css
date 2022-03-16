@@ -45,6 +45,10 @@
     cursor: pointer;
     position: absolute;
     right: 10px;
+    z-index: 150;
+  }
+  .navbar.active .hamb__field .bar{
+    background-color: white;
   }
   .bar {
     display: block;
@@ -67,7 +71,7 @@
     padding: 40px 60px 60px 40px;
   }
   .popup.open {
-    top: 50px;
+    top: 0px;
   }
   .popup .menu {
     width: 100%;
@@ -116,11 +120,11 @@
   }
   .hamb__field.active .bar:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
-    background-color: white;
+    background-color: black;
   }
   .hamb__field.active .bar:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
-    background-color: white;
+    background-color: black;
   }
   .navbar.active {
     background-color: #191e1e;
