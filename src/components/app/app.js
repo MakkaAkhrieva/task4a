@@ -22,13 +22,6 @@ const cardSeach = (items, term) => {
 function App() {
  
   const [term, setTerm] = useState("");
-
-  const onUpdateSearch=useCallback((term)=>{
-    const timeoutId=setTimeout(()=>{
-      setTerm(term);
-    }, 300);
-    if(!timeoutId)clearTimeout(timeoutId);
-  },[term]);
  
   const visibleData= useMemo(()=>{
     return cardSeach(cardsBD, term);
@@ -40,7 +33,7 @@ function App() {
       <AppInfo />
       <section className="flex-container">
         <div className="container">
-          <SeachPanel onUpdateSearch={onUpdateSearch} />
+          <SeachPanel onUpdateSearch={setTerm}/>
           <Cards data={visibleData} />
         </div>
       </section>
