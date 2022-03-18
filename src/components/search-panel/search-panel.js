@@ -12,8 +12,9 @@ const SeachPanel = (props) => {
   const UpdateSearch=useCallback((term)=>{
     const timeoutId=setTimeout(()=>{
       props.onUpdateSearch(term);
+      if(timeoutId)clearTimeout(timeoutId);
     }, 300);
-    if(!timeoutId)clearTimeout(timeoutId);
+    
   },[props.onUpdateSearch]);
 
   return (
