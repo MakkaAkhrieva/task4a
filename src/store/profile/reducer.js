@@ -18,7 +18,7 @@ export const profileReduces=(state=initialState,action)=>{
                 ...state, password:action.payload
             };
 
-        case profileActionTypes.SET_PASSWORD:
+        case profileActionTypes.SET_ISLOGGEDIN:
             return{
                 ...state, isLoggedIn:action.payload
             };
