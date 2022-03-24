@@ -3,7 +3,7 @@ import { profileActionTypes } from "./actions";
 const initialState={
     login:'',
     password:'',
-    isLoggedIn:'false'
+    isLoggedIn:false
 }
 
 export const profileReduces=(state=initialState,action)=>{

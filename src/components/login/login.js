@@ -26,16 +26,16 @@ const LogIn = (/* props */) => {
    dispatch(profileActions.setPassword(e.target.value));
   };
 
-  const login=useSelector((state)=>state.login);
-  const password=useSelector((state)=>state.password);
-  const isLoggedIn=useSelector((state)=>state.isLoggedIn);
+  const profile=useSelector((state)=>state.profile);
+  /* const password=useSelector((state)=>state.password);
+  const isLoggedIn=useSelector((state)=>state.isLoggedIn); */
   /* const{password}=useSelector((state)=>state.password); */
 
   const navigate = useNavigate();
 
   const logIn = (e) => {
     e.preventDefault();
-    if (login === "admin" && password === "1234") {
+    if (profile.login === "admin" && profile.password === "1234") {
       /* props.setIsLoggedIn(true); */
       dispatch(profileActions.setIsLoggedIn(true));
       navigate("/");
